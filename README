@@ -8,54 +8,52 @@ The idea is simple: try to prevent users from choosing passwords that
 could be guessed by "Crack" by filtering them out, at source.
 
 Runtime requirements:
-  cygwin-1.5.19-4
-  libintl3-0.14.5-1
+  cygwin-1.5.23-2
+  libintl8-0.15-1
 
 The python bindings also require:
-  python-2.4.1-1
+  python-2.4.3-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  libtool1.5-1.5.20-2
-  make-3.80-1
-  sed-4.1.4-1
+  cygwin-1.5.23-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.9-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
 
 Canonical website:
   http://sourceforge.net/projects/cracklib/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/cracklib/
+  http://downloads.sourceforge.net/cracklib/
 
 -------------------------------------------
 
 Build instructions:
-  unpack cracklib-2.8.9-X-src.tar.bz2
+  unpack cracklib-2.8.10-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./cracklib-2.8.9-X.sh all
+  cygport ./cracklib-2.8.10-X.cygport all
 
 This will create:
-  /usr/src/cracklib-2.8.9-X-src.tar.bz2
-  /usr/src/cracklib-2.8.9-X.tar.bz2
-  /usr/src/libcrack2-2.8.9-X.tar.bz2
-  /usr/src/pycracklib-2.8.9-X.tar.bz2
+  /usr/src/cracklib-2.8.10-X-src.tar.bz2
+  /usr/src/cracklib-2.8.10-X.tar.bz2
+  /usr/src/libcrack-devel-2.8.10-X.tar.bz2
+  /usr/src/libcrack2-2.8.10-X.tar.bz2
+  /usr/src/pycracklib-2.8.10-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the main package:
 
-  /usr/include/crack.h
-  /usr/include/packer.h
-  /usr/lib/libcrack.a
-  /usr/lib/libcrack.dll.a
-  /usr/lib/libcrack.la
+(cracklib)
   /usr/sbin/cracklib-check.exe
   /usr/sbin/cracklib-format
   /usr/sbin/cracklib-packer.exe
@@ -65,16 +63,14 @@ Files included in the main package:
   /usr/share/cracklib/pw_dict.hwm
   /usr/share/cracklib/pw_dict.pwd
   /usr/share/cracklib/pw_dict.pwi
-  /usr/share/doc/Cygwin/cracklib-2.8.9.README
-  /usr/share/doc/cracklib-2.8.9/ABOUT-NLS
-  /usr/share/doc/cracklib-2.8.9/AUTHORS
-  /usr/share/doc/cracklib-2.8.9/ChangeLog
-  /usr/share/doc/cracklib-2.8.9/COPYING
-  /usr/share/doc/cracklib-2.8.9/INSTALL
-  /usr/share/doc/cracklib-2.8.9/NEWS
-  /usr/share/doc/cracklib-2.8.9/README
-  /usr/share/doc/cracklib-2.8.9/README-DAWG
-  /usr/share/doc/cracklib-2.8.9/README-WORDS
+  /usr/share/doc/Cygwin/cracklib-2.8.10.README
+  /usr/share/doc/cracklib-2.8.10/ABOUT-NLS
+  /usr/share/doc/cracklib-2.8.10/AUTHORS
+  /usr/share/doc/cracklib-2.8.10/COPYING
+  /usr/share/doc/cracklib-2.8.10/ChangeLog
+  /usr/share/doc/cracklib-2.8.10/INSTALL
+  /usr/share/doc/cracklib-2.8.10/NEWS
+  /usr/share/doc/cracklib-2.8.10/README
   /usr/share/locale/cs/LC_MESSAGES/cracklib.mo
   /usr/share/locale/da/LC_MESSAGES/cracklib.mo
   /usr/share/locale/de/LC_MESSAGES/cracklib.mo
@@ -97,18 +93,27 @@ Files included in the main package:
   /usr/share/locale/zh_CN/LC_MESSAGES/cracklib.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/cracklib.mo
 
-Files included in the runtime library package:
-
+(libcrack2)
   /usr/bin/cygcrack-2.dll
 
-Files included in the python bindings package:
+(libcrack-devel)
+  /usr/include/crack.h
+  /usr/include/packer.h
+  /usr/lib/libcrack.a
+  /usr/lib/libcrack.dll.a
+  /usr/lib/libcrack.la
 
+(pycracklib)
   /usr/lib/python2.4/site-packages/cracklibmodule.dll
   /usr/lib/python2.4/site-packages/cracklibmodule.la
+
 
 ------------------
 
 Port Notes:
+
+----- version 2.8.10-1 -----
+Version bump, built with cygport.
 
 ----- version 2.8.9-1 -----
 Version bump.
