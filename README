@@ -8,19 +8,19 @@ The idea is simple: try to prevent users from choosing passwords that
 could be guessed by "Crack" by filtering them out, at source.
 
 Runtime requirements:
-  cygwin-1.5.23-2
+  cygwin-1.5.24-2
   libintl8-0.15-1
 
 The python bindings also require:
-  python-2.4.3-1
+  python-2.5.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.23-2
+  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.9-1
+  cygport-0.2.11-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   libtool1.5-1.5.23a-2
@@ -47,7 +47,7 @@ This will create:
   /usr/src/cracklib-2.8.10-X.tar.bz2
   /usr/src/libcrack-devel-2.8.10-X.tar.bz2
   /usr/src/libcrack2-2.8.10-X.tar.bz2
-  /usr/src/pycracklib-2.8.10-X.tar.bz2
+  /usr/src/python-cracklib-2.8.10-X.tar.bz2
 
 -------------------------------------------
 
@@ -103,14 +103,17 @@ Files included in the main package:
   /usr/lib/libcrack.dll.a
   /usr/lib/libcrack.la
 
-(pycracklib)
-  /usr/lib/python2.4/site-packages/cracklibmodule.dll
-  /usr/lib/python2.4/site-packages/cracklibmodule.la
+(python-cracklib)
+  /usr/lib/python2.5/site-packages/cracklibmodule.dll
+  /usr/lib/python2.5/site-packages/cracklibmodule.la
 
 
 ------------------
 
 Port Notes:
+
+----- version 2.8.10-2 -----
+Rebuilt for python-2.5.
 
 ----- version 2.8.10-1 -----
 Version bump, built with cygport.
