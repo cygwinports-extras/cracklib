@@ -1,0 +1,20 @@
+DESCRIPTION="Password cracking library"
+HOMEPAGE="http://sourceforge.net/projects/cracklib/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+PKG_NAMES="${PN} libcrack2 libcrack-devel pycracklib"
+PKG_HINTS="setup lib devel python"
+PKG_CONTENTS[0]='usr/sbin/ usr/share/'
+PKG_CONTENTS[1]='usr/bin/*.dll'
+PKG_CONTENTS[2]='--exclude=python* usr/include/ usr/lib/'
+PKG_CONTENTS[3]='usr/lib/python*/'
+
+DIFF_EXCLUDES='m4'
+
+CYGCONF_ARGS="--with-python"
+
+src_install() {
+	cd ${B}
+	cyginstall
+	cygmake dict-local DESTDIR=${D}
+}

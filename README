@@ -36,18 +36,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack cracklib-2.8.10-X-src.tar.bz2
+  unpack cracklib-2.8.12-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./cracklib-2.8.10-X.cygport all
+  cygport ./cracklib-2.8.12-X.cygport all
 
 This will create:
-  /usr/src/cracklib-2.8.10-X-src.tar.bz2
-  /usr/src/cracklib-2.8.10-X.tar.bz2
-  /usr/src/libcrack-devel-2.8.10-X.tar.bz2
-  /usr/src/libcrack2-2.8.10-X.tar.bz2
-  /usr/src/python-cracklib-2.8.10-X.tar.bz2
+  /usr/src/cracklib-2.8.12-X-src.tar.bz2
+  /usr/src/cracklib-2.8.12-X.tar.bz2
+  /usr/src/libcrack-devel-2.8.12-X.tar.bz2
+  /usr/src/libcrack2-2.8.12-X.tar.bz2
+  /usr/src/python-cracklib-2.8.12-X.tar.bz2
 
 -------------------------------------------
 
@@ -63,14 +63,14 @@ Files included in the main package:
   /usr/share/cracklib/pw_dict.hwm
   /usr/share/cracklib/pw_dict.pwd
   /usr/share/cracklib/pw_dict.pwi
-  /usr/share/doc/Cygwin/cracklib-2.8.10.README
-  /usr/share/doc/cracklib-2.8.10/ABOUT-NLS
-  /usr/share/doc/cracklib-2.8.10/AUTHORS
-  /usr/share/doc/cracklib-2.8.10/COPYING
-  /usr/share/doc/cracklib-2.8.10/ChangeLog
-  /usr/share/doc/cracklib-2.8.10/INSTALL
-  /usr/share/doc/cracklib-2.8.10/NEWS
-  /usr/share/doc/cracklib-2.8.10/README
+  /usr/share/doc/Cygwin/cracklib-2.8.12.README
+  /usr/share/doc/cracklib-2.8.12/ABOUT-NLS
+  /usr/share/doc/cracklib-2.8.12/AUTHORS
+  /usr/share/doc/cracklib-2.8.12/COPYING
+  /usr/share/doc/cracklib-2.8.12/ChangeLog
+  /usr/share/doc/cracklib-2.8.12/INSTALL
+  /usr/share/doc/cracklib-2.8.12/NEWS
+  /usr/share/doc/cracklib-2.8.12/README
   /usr/share/locale/cs/LC_MESSAGES/cracklib.mo
   /usr/share/locale/da/LC_MESSAGES/cracklib.mo
   /usr/share/locale/de/LC_MESSAGES/cracklib.mo
@@ -107,10 +107,12 @@ Files included in the main package:
   /usr/lib/python2.5/site-packages/cracklibmodule.dll
   /usr/lib/python2.5/site-packages/cracklibmodule.la
 
-
 ------------------
 
 Port Notes:
+
+----- version 2.8.12-1 -----
+Version bump.
 
 ----- version 2.8.10-2 -----
 Rebuilt for python-2.5.
