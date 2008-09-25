@@ -1,0 +1,23 @@
+--- origsrc/cracklib-2.8.13/lib/Makefile.am	2006-07-20 17:20:16.000000000 -0500
++++ src/cracklib-2.8.13/lib/Makefile.am	2008-09-24 23:21:20.825505400 -0500
+@@ -14,7 +14,7 @@
+ # For next ABI changing release, use 3:0:0
+ # After that, follow the libtool recommended incrementing procedure
+ #
+-libcrack_la_LDFLAGS = -version-info 10:0:8
++libcrack_la_LDFLAGS = -version-info 10:0:8 -no-undefined
+ 
+ # Link in NLS libs. Needed by FreeBSD build
+ libcrack_la_LIBADD = $(LTLIBINTL)
+--- origsrc/cracklib-2.8.13/python/Makefile.am	2008-09-23 06:51:39.000000000 -0500
++++ src/cracklib-2.8.13/python/Makefile.am	2008-09-24 23:20:46.388005400 -0500
+@@ -1,7 +1,8 @@
+ if BUILD_PYTHON
+ python_PYTHON = cracklib.py
+ pyexec_LTLIBRARIES = _cracklibmodule.la
+-_cracklibmodule_la_LDFLAGS = -module -avoid-version $(top_builddir)/lib/libcrack.la
++_cracklibmodule_la_LDFLAGS = -module -avoid-version -no-undefined
++_cracklibmodule_la_LIBADD = $(top_builddir)/lib/libcrack.la -lpython@PYTHON_VERSION@
+ DEFS += '-DDEFAULT_CRACKLIB_DICT="$(DEFAULT_CRACKLIB_DICT)"'
+ DEFS += '-DPYTHON_H="python@PYTHON_VERSION@/Python.h"'
+ endif

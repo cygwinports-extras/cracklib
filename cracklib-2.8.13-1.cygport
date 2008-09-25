@@ -1,13 +1,18 @@
+inherit python
+
 DESCRIPTION="Password cracking library"
 HOMEPAGE="http://sourceforge.net/projects/cracklib/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="2.8.13-build.patch
+           2.8.13-no-undefined.patch"
 
-PKG_NAMES="${PN} libcrack2 libcrack-devel pycracklib"
+abi=2
+PKG_NAMES="${PN} libcrack${abi} libcrack-devel python-${PN}"
 PKG_HINTS="setup lib devel python"
-PKG_CONTENTS[0]='usr/sbin/ usr/share/'
-PKG_CONTENTS[1]='usr/bin/*.dll'
+PKG_CONTENTS[0]='usr/sbin/ usr/share/doc/ usr/share/locale/'
+PKG_CONTENTS[1]="usr/bin/*-${abi}.dll usr/share/${PN}/"
 PKG_CONTENTS[2]='--exclude=python* usr/include/ usr/lib/'
-PKG_CONTENTS[3]='usr/lib/python*/'
+PKG_CONTENTS[3]="${PYTHON_SITELIB#/}"
 
 DIFF_EXCLUDES='m4'
 
