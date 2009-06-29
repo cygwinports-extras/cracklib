@@ -1,5 +1,5 @@
 category: Utils
-requires: cygwin libcrack2 bash gzip
+requires: libcrack2 bash gzip
 sdesc: "Password cracking library (utilities, dictionary)"
 ldesc: "CrackLib is a library containing a C function (well, lots of
 functions really, but you only need to use one of them) which may be

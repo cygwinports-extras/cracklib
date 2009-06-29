@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin gettext libcrack2 zlib
+requires: gettext libcrack2 zlib
 external-source: cracklib
 sdesc: "Password cracking library (development)"
 ldesc: "CrackLib is a library containing a C function (well, lots of
