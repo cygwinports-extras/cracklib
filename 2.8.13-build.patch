@@ -24,7 +24,7 @@
  
  dnl internationalization macros
 -AM_GNU_GETTEXT_VERSION
-+AM_GNU_GETTEXT_VERSION(0.15)
++AM_GNU_GETTEXT_VERSION(0.17)
  AM_GNU_GETTEXT([external])
  
  dnl Control default dictname

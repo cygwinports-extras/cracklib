@@ -1,7 +1,7 @@
-category: Libs
-requires: gettext libcrack2 zlib
+category: Python
+requires: libcrack2 libgcc1 python
 external-source: cracklib
-sdesc: "Password cracking library (development)"
+sdesc: "Password cracking library (Python bindings)"
 ldesc: "CrackLib is a library containing a C function (well, lots of
 functions really, but you only need to use one of them) which may be
 used in a passwd-like program.

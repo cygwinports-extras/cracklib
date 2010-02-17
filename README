@@ -8,25 +8,26 @@ The idea is simple: try to prevent users from choosing passwords that
 could be guessed by "Crack" by filtering them out, at source.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libintl8-0.15-1
-  zlib-1.2.3-2
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
+  libintl8-0.17-11
+  zlib0-1.2.3-10
   bash
   gzip
   scowl
 (python-cracklib)
-  python-2.5.2-3
+  python-2.5.4-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20080624-2
-  cygport-0.4.0-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.2-2
-  make-3.81-1
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
+  binutils-2.19.51-1
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-15
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -38,100 +39,25 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack cracklib-2.8.13-X-src.tar.bz2
+  unpack cracklib-2.8.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./cracklib-2.8.13-X.cygport all
+  cygport ./cracklib-2.8.15-X.cygport all
 
 This will create:
-  /usr/src/cracklib-2.8.13-X-src.tar.bz2
-  /usr/src/cracklib-2.8.13-X.tar.bz2
-  /usr/src/libcrack-devel-2.8.13-X.tar.bz2
-  /usr/src/libcrack2-2.8.13-X.tar.bz2
-  /usr/src/python-cracklib-2.8.13-X.tar.bz2
+  /usr/src/cracklib-2.8.15-X-src.tar.bz2
+  /usr/src/cracklib-2.8.15-X.tar.bz2
+  /usr/src/libcrack-devel-2.8.15-X.tar.bz2
+  /usr/src/libcrack2-2.8.15-X.tar.bz2
+  /usr/src/python-cracklib-2.8.15-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(cracklib)
-  /usr/sbin/cracklib-check.exe
-  /usr/sbin/cracklib-format
-  /usr/sbin/cracklib-packer.exe
-  /usr/sbin/cracklib-unpacker.exe
-  /usr/sbin/create-cracklib-dict
-  /usr/share/doc/cracklib-2.8.13/ABOUT-NLS
-  /usr/share/doc/cracklib-2.8.13/AUTHORS
-  /usr/share/doc/cracklib-2.8.13/COPYING
-  /usr/share/doc/cracklib-2.8.13/INSTALL
-  /usr/share/doc/cracklib-2.8.13/NEWS
-  /usr/share/doc/cracklib-2.8.13/README
-  /usr/share/locale/cs/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/da/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/de/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/el/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/es/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/fi/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/fr/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/hu/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/it/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/ja/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/lt/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/nb/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/nl/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/pa/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/pl/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/pt/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/sk/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/sl_SI/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/cracklib.mo
-  /usr/share/locale/zh_TW/LC_MESSAGES/cracklib.mo
-
-(libcrack2)
-  /usr/bin/cygcrack-2.dll
-  /usr/share/cracklib/cracklib-small
-  /usr/share/cracklib/cracklib.magic
-  /usr/share/cracklib/pw_dict.hwm
-  /usr/share/cracklib/pw_dict.pwd
-  /usr/share/cracklib/pw_dict.pwi
-
-(libcrack-devel)
-  /usr/include/crack.h
-  /usr/include/packer.h
-  /usr/lib/libcrack.a
-  /usr/lib/libcrack.dll.a
-  /usr/lib/libcrack.la
-
-(python-cracklib)
-  /usr/lib/python2.5/site-packages/_cracklibmodule.dll
-  /usr/lib/python2.5/site-packages/_cracklibmodule.la
-  /usr/lib/python2.5/site-packages/cracklib.py
-  /usr/lib/python2.5/site-packages/cracklib.pyc
-  /usr/lib/python2.5/site-packages/cracklib.pyo
-
-------------------
-
 Port Notes:
 
------ version 2.8.13-1 -----
-Version bump.
-
------ version 2.8.12-1 -----
-Version bump.
-
------ version 2.8.10-2 -----
-Rebuilt for python-2.5.
-
------ version 2.8.10-1 -----
-Version bump, built with cygport.
-
------ version 2.8.9-1 -----
-Version bump.
-
------ version 2.8.6-1 -----
-Initial release for Cygwin.
+----- version 2.8.15-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
