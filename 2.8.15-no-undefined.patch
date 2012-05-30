@@ -14,7 +14,7 @@
 @@ -2,7 +2,8 @@ if BUILD_PYTHON
  python_PYTHON = cracklib.py
  pyexec_LTLIBRARIES = _cracklibmodule.la
- AM_CFLAGS = -I$(top_srcdir)/lib
+ AM_CFLAGS = -I$(top_srcdir)/lib -Wall
 -_cracklibmodule_la_LDFLAGS = -module -avoid-version $(top_builddir)/lib/libcrack.la
 +_cracklibmodule_la_LDFLAGS = -module -avoid-version -no-undefined
 +_cracklibmodule_la_LIBADD = $(top_builddir)/lib/libcrack.la -lpython@PYTHON_VERSION@

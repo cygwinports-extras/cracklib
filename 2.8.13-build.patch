@@ -17,14 +17,3 @@
  		export LD_LIBRARY_PATH="$(top_builddir)/lib/.libs:$$LD_LIBRARY_PATH" ; \
  	fi ; \
  	cracklib-format "$(srcdir)"/dicts/* | cracklib-packer $(DESTDIR)/$(DEFAULT_CRACKLIB_DICT)
---- origsrc/cracklib-2.8.13/configure.in	2008-09-23 06:53:24.000000000 -0500
-+++ src/cracklib-2.8.13/configure.in	2008-09-24 23:21:20.809880400 -0500
-@@ -48,7 +48,7 @@
- AC_CHECK_FUNCS(getpwuid_r)
- 
- dnl internationalization macros
--AM_GNU_GETTEXT_VERSION
-+AM_GNU_GETTEXT_VERSION(0.17)
- AM_GNU_GETTEXT([external])
- 
- dnl Control default dictname

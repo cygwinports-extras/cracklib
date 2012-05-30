@@ -1,5 +1,5 @@
 category: Utils
-requires: libcrack2 libgcc1 bash gzip
+requires: libcrack2 bash grep gzip
 sdesc: "Password cracking library (utilities)"
 ldesc: "CrackLib is a library containing a C function (well, lots of
 functions really, but you only need to use one of them) which may be

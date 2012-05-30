@@ -6,9 +6,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 PATCH_URI="2.8.13-build.patch
            2.8.15-no-undefined.patch"
 
-PKG_NAMES="${PN} libcrack2 libcrack-devel python-${PN}"
-cracklib_CONTENTS='usr/sbin/ usr/share/doc/'
-libcrack2_CONTENTS="usr/bin/*-2.dll usr/share/${PN}/ usr/share/locale/"
+PKG_NAMES="${PN} libcrack2 libcrack-common libcrack-devel python-${PN}"
+cracklib_CONTENTS='usr/sbin/'
+libcrack2_CONTENTS="usr/bin/cygcrack-2.dll"
+libcrack_common_CONTENTS="usr/share/"
 libcrack_devel_CONTENTS='--exclude=python* usr/include/ usr/lib/'
 python_cracklib_CONTENTS="${PYTHON_SITELIB#/}"
 
@@ -21,3 +22,5 @@ src_install() {
 	cyginstall
 	cygmake dict-local DESTDIR=${D}
 }
+
+KEEP_LA_FILES="none"

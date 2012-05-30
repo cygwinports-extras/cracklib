@@ -1,5 +1,5 @@
 category: Libs
-requires: libgcc1 libintl8 zlib0 scowl
+requires: libcrack-common libintl8 zlib0 scowl
 external-source: cracklib
 sdesc: "Password cracking library (runtime)"
 ldesc: "CrackLib is a library containing a C function (well, lots of
