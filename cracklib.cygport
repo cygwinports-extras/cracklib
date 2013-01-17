@@ -1,0 +1,40 @@
+inherit python
+
+NAME="cracklib"
+VERSION=2.8.22
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Password cracking library"
+DESCRIPTION="CrackLib is a library containing a C function (well, lots of
+functions really, but you only need to use one of them) which may be used in a
+passwd-like program. The idea is simple: try to prevent users from choosing
+passwords that could be guessed by Crack by filtering them out, at source."
+HOMEPAGE="http://sourceforge.net/projects/cracklib/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="2.8.13-build.patch
+           2.8.15-no-undefined.patch"
+
+PKG_NAMES="${PN} libcrack2 libcrack-common libcrack-devel python-${PN}"
+cracklib_CATEGORY="Utils"
+cracklib_SUMMARY="Password cracking utilities"
+cracklib_CONTENTS='usr/sbin/'
+libcrack2_REQUIRES="libcrack-common scowl"
+libcrack2_CONTENTS="usr/bin/cygcrack-2.dll"
+libcrack_common_CONTENTS="usr/share/"
+libcrack_devel_REQUIRES="cracklib"
+libcrack_devel_CONTENTS='--exclude=python* usr/include/ usr/lib/'
+python_cracklib_CATEGORY="Python"
+python_cracklib_SUMMARY="${SUMMARY} (Python bindings)"
+python_cracklib_CONTENTS="${PYTHON_SITELIB#/}"
+
+DIFF_EXCLUDES='m4'
+
+CYGCONF_ARGS="--with-python"
+
+src_install() {
+	cd ${B}
+	cyginstall
+	cygmake dict-local DESTDIR=${D}
+}
+
+KEEP_LA_FILES="none"
